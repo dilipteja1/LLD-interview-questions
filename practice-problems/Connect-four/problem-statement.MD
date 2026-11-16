@@ -125,3 +125,15 @@ GameState
         WON
         DRAW
 ```
+
+## Extensions
+
+- What if the second player is a bot. 
+
+when computer / bot plays the game, we need to make an automatic move for that.
+create a Player interface and implement HumanPlayer and BotPlayer classes on top of them. That will be a cleaner approach. 
+Also for bot, add a botEngine which comes up with a col to play. 
+
+- How to add a undo functionality
+
+for undo, we need to add a history stack. In Game class, we moveHistory when we have a new event. if we have to undo, we pop the event from the stack and hydrate the other classes with relevant state. 
